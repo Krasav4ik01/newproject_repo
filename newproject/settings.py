@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
     'main'
 ]
 
@@ -83,8 +84,11 @@ WSGI_APPLICATION = 'newproject.wsgi.application'
 DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'ciba',
-            
+            'NAME': 'd191jk558dehi4',
+            'USER': 'fvjhqfxojnngsh',     
+            'PASSWORD': '7a3737dd278ff15a6e520d4b7d0f9fcb0dd7708cb75e60bf692b01856d3e0bb5', 
+            'HOST': 'ec2-52-3-200-138.compute-1.amazonaws.com',
+            'PORT': '5432'
         }
     }
 
@@ -139,6 +143,7 @@ EMAIL_HOST_PASSWORD = "13901560"
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+STATIC_DIRS = [os.path.join(BASE_DIR, "static")]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
