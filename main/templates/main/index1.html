@@ -1,0 +1,37 @@
+
+{% block content %}
+<div class="features">
+    <h1>Register Form </h1>
+    <form  method="post" >
+        {% csrf_token %}
+      <h2>first name:  {{form.name}} <br> </h2>
+      <h2>last name:  {{form.surname}} <br> </h2>
+      <h2>username:  {{form.username}} <br> </h2>
+      <h2>age:  {{form.age}}<br> </h2>
+      <h2>email:  {{form.email}} <br> </h2>
+      <h2>phone number:  {{form.number}} <br> </h2>
+      <h2>password:  <input type="password"{{form.password}}>  <br> </h2>
+      <h2>re enter password: <input type="password" {{form.password}}>  <br> </h2>
+        <h2>city:  {{form.city}} <br> </h2>
+        <span>{{ error }}</span>
+        <button type="submit" class="btn btn-success">Register</button>
+    </form>
+</div>
+{% endblock %}
+
+<style>
+    input{
+        margin: 7px;
+        padding: 5px 4rem;
+        text-align: center;
+    }
+    form{
+        text-align: center;
+    }
+    button{
+        margin-top: 3.5%;
+    }
+    h1{
+        text-align: center;
+    }
+</style>
