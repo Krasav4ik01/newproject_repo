@@ -137,9 +137,9 @@ EMAIL_PORT=587
 EMAIL_USE_TLS = True
 EMAIL_HOST_PASSWORD = "13901560"
 
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-# STATIC_URL = '/static/'
-# STATIC_DIRS = [os.path.join(BASE_DIR, "static")]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
+STATIC_DIRS = [os.path.join(BASE_DIR, "static")]
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
