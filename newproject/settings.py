@@ -27,9 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ao&*i4y5jbv=wucs%jql$e_2*g1=%=-2!@0*eibyv=7a(6qd&u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['newproject14.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = []
 
 
 
@@ -82,15 +82,11 @@ WSGI_APPLICATION = 'newproject.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'd191jk558dehi4',
-            'USER': 'fvjhqfxojnngsh',     
-            'PASSWORD': '7a3737dd278ff15a6e520d4b7d0f9fcb0dd7708cb75e60bf692b01856d3e0bb5', 
-            'HOST': 'ec2-52-3-200-138.compute-1.amazonaws.com',
-            'PORT': '5432'
-        }
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
+}
 
 
 # Password validation
@@ -141,10 +137,10 @@ EMAIL_PORT=587
 EMAIL_USE_TLS = True
 EMAIL_HOST_PASSWORD = "13901560"
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'
-STATIC_DIRS = [os.path.join(BASE_DIR, "static")]
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_URL = '/static/'
+# STATIC_DIRS = [os.path.join(BASE_DIR, "static")]
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
